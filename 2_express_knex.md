@@ -12,7 +12,7 @@ In the `routes/books.js` module, add middleware to handle the following HTTP req
 |----------------|--------------------|----------------------------------------------------------|-----------------|------------------------------------------------------------------------|
 | `GET`          | `/books`           | N/A                                                      | `200`           | `[{ id: 1, "title": "JavaScript, The Good Parts", ... }, ...]`         |
 | `GET`          | `/books/1`         | N/A                                                      | `200`           | `{ id: 1, "title": "JavaScript, The Good Parts", ... }`                |
-| `POST`         | `/books`           | `{ "title": "You Don't Know JS: Types & Grammar", ... }` | `200`           | `{ id: 9, "title": "You Don't Know JS: Types & Grammar", ... }`        |
+| `POST`         | `/books`           | `{ "title": "You Don't Know JS: Types & Grammar", ... }` | `200`           | `{ id: 9, "title": "You Don't Know JS: Types & Grammar", ... }`       
 | `PATCH`        | `/books/9`         | `{ description: "Looks at type coercion problems." }`    | `200`           | `{ id: 9, ..., description: "Looks at type coercion problems.", ... }` |
 | `DELETE`       | `/books/9`         | N/A                                                      | `200`           | `{ "title": "You Don't Know JS: Types & Grammar", ... }`               |
 
