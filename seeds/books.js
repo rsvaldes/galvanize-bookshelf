@@ -1,4 +1,4 @@
-let booksInfo = require('../books.js');
+const booksInfo = require('../books.js');
 
 exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
@@ -86,6 +86,9 @@ exports.seed = function(knex, Promise) {
           created_at: booksInfo[7]['created_at'],
           updated_at: booksInfo[7]['updated_at']
         }])
-      ]);
+      ])
+      .then(function(){
+      return knex.raw("SELECT setval('books_id_seq', (SELECT MAX(id) FROM books))")
+    })
     });
 };
