@@ -2,9 +2,6 @@
 
 const express = require('express');
 
-// const booksInfo = require('../books.js');
-
-// eslint-disable-next-line new-cap
 const router = express.Router();
 const knex = require('../knex');
 const humps = require('humps');
@@ -71,7 +68,7 @@ router.delete('/books/:id', (req,res,next)=> {
     coverUrl: data[0]['cover_url']
   };
 
-  let camelData = humps.camelizeKeys(deleted)
+  let camelData = humps.camelizeKeys(deleted);
   res.send(camelData);
   })
   .catch((err)=> {
